@@ -14,4 +14,18 @@ public class FeedbackController {
     public String test(){
         return "<h1>Yummyback is working</h1>";
     }
+
+    @RequestMapping(value = "/validate", method = RequestMethod.GET)
+    @ResponseBody
+    public Boolean validate(){
+        return true;
+    }
+
+    @RequestMapping(value = "/submit", method = RequestMethod.GET)
+    @ResponseBody
+    public String submit(){
+        return "Submitted";
+    }
+
+
 }
