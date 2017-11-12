@@ -1,8 +1,10 @@
 package com.yummyback.controllers;
 
+import com.yummyback.services.AppService;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
@@ -21,9 +23,19 @@ public class FeedbackController {
         return true;
     }
 
-    @RequestMapping(value = "/submit", method = RequestMethod.GET)
+    @RequestMapping(value = "/submit", method = RequestMethod.POST)
     @ResponseBody
-    public String submit(){
+    public String submit(
+            @RequestParam("service") int service,
+            @RequestParam("quality") int quality,
+            @RequestParam("cleanliness") int cleanliness,
+            @RequestParam("food_value") int food_alue,
+            @RequestParam("response") int response_time,
+            @RequestParam("comment") String comment,
+            @RequestParam("email") String email,
+            @RequestParam("mobile") String mobile
+    ){
+        String datetime = AppService.getDateTime();
         return "Submitted";
     }
 

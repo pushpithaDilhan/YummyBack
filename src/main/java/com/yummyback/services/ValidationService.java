@@ -1,5 +1,9 @@
 package com.yummyback.services;
 
-public interface ValidationService {
-    public Boolean validateUrl(String domain, String uuid);
+public class ValidationService {
+
+    public Boolean validateUrl(String domain, String uuid) {
+        return true;
+    }
+
 }
