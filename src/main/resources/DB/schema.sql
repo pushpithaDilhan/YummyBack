@@ -8,7 +8,7 @@ CREATE TABLE dish (
   price INT NOT NULL,
   PRIMARY KEY (dish_id));
 
-# conjunction table dish <=> feedback
+# associative entity dish <=> feedback
 # feedback_id is a uuid with length 36
 CREATE TABLE feedback_link (
   feedback_id VARCHAR(36) NOT NULL,
