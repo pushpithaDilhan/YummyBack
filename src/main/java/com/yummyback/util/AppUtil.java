@@ -1,11 +1,11 @@
-package com.yummyback.services;
+package com.yummyback.util;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.UUID;
 
-public class AppService {
+public class AppUtil {
 
     private static DateFormat dateFormat;
 

@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "Feedback">
+    <resultMap id="feedback" type="com.yummyback.models.Feedback">
+        <result property="feedback_id" />
+    </resultMap>
+
+    <insert id = "insert" parameterType = "com.yummyback.models.Feedback">
+        INSERT INTO feedback (feedback_id, service, quality, cleanliness, food_value, res_time, comments, email, datetime, mobile)
+        VALUES (#{feedback_id}, #{service}, #{quality}, #{cleanliness}, #{food_value}, #{res_time}, #{comments}, #{email}, #{datetime}, #{mobile});
+    </insert>
+
+    <select id="getByUUID" parameterType="string" resultMap="feedback">
+        SELECT * FROM feedback WHERE feedback_id = #{feedback_id};
+    </select>
+
+</mapper>

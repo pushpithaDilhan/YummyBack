@@ -1,6 +1,6 @@
 package com.yummyback.controllers;
 
-import com.yummyback.services.AppService;
+import com.yummyback.util.AppUtil;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -35,7 +35,7 @@ public class FeedbackController {
             @RequestParam("email") String email,
             @RequestParam("mobile") String mobile
     ){
-        String datetime = AppService.getDateTime();
+        String datetime = AppUtil.getDateTime();
         return "Submitted";
     }
 

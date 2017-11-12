@@ -6,8 +6,20 @@ public class Feedback {
     private int quality;
     private int cleanliness;
     private int food_value;
-    private int response_time;
+    private int res_time;
     private String comments;
+    private String email;
+    private String mobile;
+
+    public int getRes_time() {
+        return res_time;
+    }
+
+    public void setRes_time(int res_time) {
+        this.res_time = res_time;
+    }
+
+    private String datetime;
 
     public String getFeedback_id() {
         return feedback_id;
@@ -16,10 +28,6 @@ public class Feedback {
     public void setFeedback_id(String feedback_id) {
         this.feedback_id = feedback_id;
     }
-
-    private String email;
-    private String mobile;
-    private String datetime;
 
     public int getService() {
         return service;
@@ -51,14 +59,6 @@ public class Feedback {
 
     public void setFood_value(int food_value) {
         this.food_value = food_value;
-    }
-
-    public int getResponse_time() {
-        return response_time;
-    }
-
-    public void setResponse_time(int response_time) {
-        this.response_time = response_time;
     }
 
     public String getComments() {
