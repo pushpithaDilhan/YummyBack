@@ -27,7 +27,7 @@ public class FeedbackServiceTest {
         feedback.setQuality(4);
         feedback.setCleanliness(4);
         feedback.setFood_value(3);
-        feedback.setRes_time(2);
+        feedback.setResponse_time(2);
         feedback.setComments("Delicious food");
         feedback.setEmail("test_123@gmail.com");
         feedback.setMobile("0123456789");
