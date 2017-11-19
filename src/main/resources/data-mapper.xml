@@ -16,4 +16,8 @@
         SELECT * FROM feedback WHERE feedback_id = #{feedback_id};
     </select>
 
+    <select id="getAllFeedbacks" resultMap="feedback">
+        SELECT * FROM feedback;
+    </select>
+
 </mapper>
