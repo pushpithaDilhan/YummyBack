@@ -2,24 +2,15 @@ package com.yummyback.controllers;
 
 import com.yummyback.util.AppUtil;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.*;
 
 @Controller
 @RequestMapping(value = "/feedback")
 public class FeedbackController {
 
-    @RequestMapping(value = "/test", method = RequestMethod.GET)
+    @RequestMapping(value = "/{uuid}", method = RequestMethod.GET)
     @ResponseBody
-    public String test(){
-        return "<h1>Yummyback is working</h1>";
-    }
-
-    @RequestMapping(value = "/validate", method = RequestMethod.GET)
-    @ResponseBody
-    public Boolean validate(){
+    public Boolean validateFeedbackUrl(@PathVariable String uuid){
         return true;
     }
 
@@ -29,7 +20,7 @@ public class FeedbackController {
             @RequestParam("service") int service,
             @RequestParam("quality") int quality,
             @RequestParam("cleanliness") int cleanliness,
-            @RequestParam("food_value") int food_alue,
+            @RequestParam("food_value") int food_value,
             @RequestParam("response") int response_time,
             @RequestParam("comment") String comment,
             @RequestParam("email") String email,
